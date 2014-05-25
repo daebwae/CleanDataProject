@@ -2,7 +2,6 @@
 
 ## File Structure 
 * CodeBook.md: details of the data set 
-* tidyWearable.txt: space-delimited tidy data set 
 * run\_analysis.R: R file that downloads the data and tidies it 
 * .gitignore: the data directory will not be uploaded because the script
               downloads the data automatically  
@@ -20,5 +19,13 @@ as R variables:
 * data: contains the full set of observationss
 * data.summary: contains the means for each variable by subject and activity
 
-The script then saves the "data.summary" datset as a comma-delimited
-data file int he directory wher you run your script. 
+The script then saves the "data.summary" as "tidyWearable.txt" and
+"data" as "wearable.txt" in your working directtory. The datsets are saved
+as a comma-delimited files just as the original data. 
+
+## Copyright Note 
+The data that is used in this script is all based on work by:
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+You can find their data [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
