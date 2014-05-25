@@ -23,7 +23,7 @@ The script then saves the "data.summary" as "tidyWearable.txt" and
 "data" as "wearable.txt" in your working directtory. The datsets are saved
 as a comma-delimited files just as the original data. 
 
-## Copyright Note 
+## Copyright Notice 
 The data that is used in this script is all based on work by:
 
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
