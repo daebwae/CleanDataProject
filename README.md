@@ -20,8 +20,8 @@ as R variables:
 * data.summary: contains the means for each variable by subject and activity
 
 The script then saves the "data.summary" as "tidyWearable.txt" and
-"data" as "wearable.txt" in your working directtory. The datsets are saved
-as a comma-delimited files just as the original data. 
+"data" as "wearable.txt" in your working directory. The data sets are saved
+as a space-delimited files just as the original data. 
 
 ## Copyright Notice 
 The data that is used in this script is all based on work by:
