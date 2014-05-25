@@ -22,5 +22,3 @@ as R variables:
 
 The script then saves the "data.summary" datset as a comma-delimited
 data file int he directory wher you run your script. 
-
-

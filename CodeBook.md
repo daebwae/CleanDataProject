@@ -2,7 +2,12 @@
 
 The data is based on training and test data from [UCI]
 (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
-on wearable computing. 
+on wearable computing. The source data set is about a study where 
+participants in which wearable computer recorded their activity levels. 
+Researches watched the participants activities via video footage and 
+labeled each observation with an activity like "walking" or "laying". 
+This can be used to determine whether the wearable computer sensors 
+can be used to determine the wearer's current activity. 
 
 To clean up the data, I first merged the training and test set to one data
 set, then selected the a subset of the variables, added the variable
@@ -14,13 +19,64 @@ however, the data set uses the post processed UCI data that employed filters.
 Therefor the "Inertial Signals/\*" files were ignored and only the files
 directly in the "./train/\*.txt" and "./test/\*.txt" are used. 
 
-## What variables are included? 
-Only the mean and standard deviation of each meassurement is used. For 
+## What variables are excluded? 
+Only the mean and standard deviation of each measurement is used. For 
 example for the body acceleration only the mean ("fBodyAcc-mean()-\*")
 and standard deviation ("fBodyAcc-std()-\*") are used. In particular 
 the "fBodyAcc-meanFreq()-\*" is not used because this is the mean 
 frequency of the meassurement, i.e. how often a value was 
 meassured on average, rather than the mean of the values of the 
 meassurements. 
+
+## What variables are included? 
+The variables in the data set are a subset of the variables of the [UCI]
+(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+data set on wearable computing. Included in the data set are the mean
+values and the standard deviation of the following measurements: 
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* ttBodyGyro-XYZ
+* ttBodyGyroJerk-XYZ
+* ttBodyAccMag
+* ttGravityAccMag
+* ttBodyAccJerkMag
+* ttBodyGyroMag
+* ttBodyGyroJerkMag
+* tfBodyAcc-XYZ
+* tfBodyAccJerk-XYZ
+* tfBodyGyro-XYZ
+* tfBodyAccMag
+* tfBodyAccJerkMag
+* tfBodyGyroMag
+* fBodyGyroJerkMag
+
+The -XYZ variables have three seperate entries for each axis of
+three-dimensional space. Additionally each of these variables has 
+two seperate entries for both their mean and the standard deviation
+which are named -mean() and -std() respectively. 
+
+
+## Two Datsets 
+When you run the R script "run\_analysis.R" two data sets 
+are generated and saved in your working directory (see README.md for
+details on the format). 
+
+Both datasets share the variables above but they differ in the 
+number of observations. 
+
+### Datset: data (wearable.txt)
+This data set contains all observations. It is the basis on which 
+the tidy data set was generated. 
+
+### Dataset: data.summary (tidyWearable.txt) 
+This data set summarizes the "data" dataset (wearable.txt) by activity 
+and subject. For each participant and their activity, the mean value 
+of the sensor data of the wearable computer's measurements is recorded. 
+
+This could be used to determine whether the different activities have 
+significant differences in the sensors' mean values to correclty label 
+the activity. 
 
 

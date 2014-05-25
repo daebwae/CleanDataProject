@@ -148,3 +148,12 @@ means <- ddply(data.summary, .(activity,subjectID, variable),
 
 # combine 
 data.summary <- dcast(means, activity + subjectID~variable, value.var="mean")
+
+################
+# save data set
+
+# I decided to use the same format as the original data file 
+write.table(data,file="wearable.txt",sep=" ",row.names=F, quote=F)
+
+# I decided to use the same format as the original data file 
+write.table(data.summary,file="tidyWearable.txt",sep=" ",row.names=F, quote=F)
