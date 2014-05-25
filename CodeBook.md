@@ -14,4 +14,13 @@ however, the data set uses the post processed UCI data that employed filters.
 Therefor the "Inertial Signals/\*" files were ignored and only the files
 directly in the "./train/\*.txt" and "./test/\*.txt" are used. 
 
+## What variables are included? 
+Only the mean and standard deviation of each meassurement is used. For 
+example for the body acceleration only the mean ("fBodyAcc-mean()-\*")
+and standard deviation ("fBodyAcc-std()-\*") are used. In particular 
+the "fBodyAcc-meanFreq()-\*" is not used because this is the mean 
+frequency of the meassurement, i.e. how often a value was 
+meassured on average, rather than the mean of the values of the 
+meassurements. 
+
 
